@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f0f0f0;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  /* Menjadikan posisi absolut untuk overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('code-programming-text-lines-symbols-multi-colored-87onuqnmrr2bloi3.jpg');
+  /* Ganti dengan nama file gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  /* Efek blur pada latar belakang */
+  z-index: -1;
+  /* Mengatur z-index agar overlay berada di belakang semua elemen lain */
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  box-shadow:
+    0 0 10px rgba(255, 119, 55, 0.5),
+    /* Shadow biru */
+    0 0 10px rgba(108, 207, 255, 0.5),
+    /* Shadow kuning */
+    0 0 10px rgba(255, 115, 229, 0.5);
+  /* Shadow pink */
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.profile img.clicked {
+  transform: scale(1.2);
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px rgba(255, 119, 55, 0.5),
+    /* Shadow biru */
+    0 0 10px rgba(108, 207, 255, 0.5),
+    /* Shadow kuning */
+    0 0 10px rgba(255, 115, 229, 0.5);
+    transition: transform 0.3s ease;
+  /* Shadow pink */
+}
+
+.profile h2 {
+  margin: 5px 0;
+  text-shadow: 2px 2px 5px #3f72af;
+}
+
+.profile p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.contact h3 {
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px #fddd8b;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact ul li {
+  margin: 5px 0;
+}
+
+.social h3 {
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px #ff7a7a;
+}
+
+.card ul li {
+  text-shadow: 2px 2px 5px #a66bff;
+  /* Bayangan ungu untuk alamat */
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social ul li {
+  margin: 0 10px;
+}
+
+.social ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile h2,
+.profile p,
+.contact h3,
+.contact ul li,
+.social h3,
+.social ul li {
+  position: relative;
+  /* Menjadikan posisi relatif untuk setiap teks */
+}
+
+.profile h2::after,
+.profile p::after,
+.contact h3::after,
+.contact ul li::after,
+.social h3::after,
+.social ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Menggeser bayangan ke bawah */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* Ketebalan bayangan */
+}
+
+.social-icon {
+  font-size: 32px;
+  transition: background-color 0.3s ease;
+}
+
+.social ul li .social-icon {
+  transition: transform 0.3s ease;
+  /* Efek transisi saat hover */
+}
+
+.social ul li:hover .social-icon {
+  background: linear-gradient(to right, #ff7e75, #ffad5a, #fff47b);
+  /* Gradien warna untuk ikon Instagram saat hover */
+}
+
+.social ul li:hover:nth-child(2) .social-icon {
+  background: linear-gradient(to right, #3ee7ad, #45d4fb, #5851db);
+  /* Gradien warna untuk ikon GitHub saat hover */
+}
+
+.social ul li:hover:nth-child(3) .social-icon {
+  background: linear-gradient(to right, #ff7a7a, #ffbf6b, #ffd86b);
+  /* Gradien warna untuk ikon Discord saat hover */
+}
+
+.social ul li:hover:nth-child(4) .social-icon {
+  background: linear-gradient(to right, #3f72af, #3069b7, #ffffff);
+  /* Gradien warna untuk ikon Steam saat hover */
+}
+
+.social ul li a:hover .social-icon,
+.social ul li a:focus .social-icon {
+  transform: scale(1.1);
+  /* Membuat ikon sedikit membesar saat dihover atau difokuskan */
+}
+
+.social ul li a .social-icon {
+  transition: transform 0.3s ease;
+  /* Efek transisi saat hover atau focus */
+}
